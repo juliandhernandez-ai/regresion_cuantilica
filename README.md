@@ -1,61 +1,30 @@
-# Regresión cuantilica
+# Regresión Cuantílica: De la media a toda la distribución
 
-Proyecto para explorar modelos de regresión cuantilica con Python y R.
+**Autor:** Julián David Hernández Grisales
 
-## Estructura del proyecto
+## 📖 Descripción del Proyecto
 
-- `apps/`: aplicaciones y scripts funcionales del proyecto.
-- `data/`: datos crudos y procesados.
-- `docs/`: documentación, material académico, imágenes y archivos LaTeX/PDF.
-- `notebooks/`: notebooks de exploración y análisis.
-- `src/`: código reutilizable del proyecto organizado por módulos.
-- `results/`: salidas, figuras y reportes generados.
-- `tests/`: pruebas unitarias e integración.
-- `requirements.txt`: dependencias del entorno Python.
+Este proyecto explora la **Regresión Cuantílica** como una alternativa robusta y flexible a la regresión lineal clásica (Mínimos Cuadrados Ordinarios - MCO). Mientras que la regresión clásica se centra únicamente en modelar la **media condicional** \(E(Y|X)\), la regresión cuantílica permite modelar diferentes puntos (cuantiles) de la distribución condicional de la variable respuesta \(Y\), ofreciendo una visión más completa de la relación entre las variables.
 
-## Organización sugerida
+A través de este repositorio, se aborda desde la motivación histórica (Koenker & Bassett, 1978) y los fundamentos matemáticos (función de pérdida *pinball*), hasta la implementación práctica y la interpretación de resultados en diferentes áreas como economía, salud y marketing.
+
+## 📂 Estructura del Proyecto
 
 ```text
 regresion_cuantilica/
-├── apps/
-│   ├── scripts/
-│   ├── streamlit/
-│   └── pages/
-├── data/
-│   ├── raw/
-│   └── processed/
-├── docs/
-│   ├── latex/
-│   ├── references/
-│   └── images/
-├── notebooks/
-│   ├── exploratory/
-│   └── reports/
-├── src/
-│   ├── preprocessing/
-│   ├── modeling/
-│   ├── evaluation/
-│   └── visualization/
-├── results/
-│   ├── figures/
-│   ├── models/
-│   └── reports/
-├── tests/
-│   ├── unit/
-│   └── integration/
-├── README.md
-├── requirements.txt
-└── .gitignore
-```
-
-## Instalación
-
-```bash
-pip install -r requirements.txt
-```
-
-## Ejecución
-
-Para ejecutar notebooks de análisis, se recomienda mantenerlos en `notebooks/exploratory/` y los scripts funcionales en `apps/scripts/`.
-
-Para ejecutar `notebooks/exploratory/modelo_R.ipynb`, instala R y el paquete `IRkernel` para que VS Code pueda seleccionar el kernel R.
+├── .venv/                     # Entorno virtual de Python
+├── aplicaciones/              # Scripts de aplicaciones prácticas
+│   └── aplicacion_1.py
+├── data/                      # Datos del proyecto
+│   ├── raw/                   # Datos crudos (advertising.csv, india.csv, natality.csv, etc.)
+│   └── processed/             # Datos procesados y listos para modelar
+├── documentacion/             # Documentación teórica y papers
+│   ├── cuantilica_Q.pdf
+│   ├── Documentación_Q.pdf
+│   └── Quantile regression...pdf
+├── imagenes/                  # Recursos gráficos para el notebook y presentaciones
+├── notebooks/                 # Jupyter Notebooks
+│   ├── modelo_R.ipynb         # Implementación en R
+│   └── regresion_cuantilica.ipynb # Cuaderno principal (teoría y ejemplos)
+├── README.md                  # Este archivo
+└── requirements.txt           # Dependencias del proyecto (Python)
